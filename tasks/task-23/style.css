@@ -1,0 +1,27 @@
+#form {
+    width: 600px;
+    font-weight: bold;
+    padding: 5px 5px 10px;
+    margin: 10px auto 0;
+    cursor: default;
+    color: white;
+    background-color: #D0D0D0;
+    text-align: center;
+}
+
+#password {
+    height: 40px;
+    font-size: x-large;
+    font-weight: bold;
+    background: #FFF;
+    outline: none;
+    border: none;
+}
+
+.password-characters {
+    width: 400px;
+    margin: 5px auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+    color: gray;
+}
