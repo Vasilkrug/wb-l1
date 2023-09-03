@@ -1,0 +1,10 @@
+.wrapper {
+    width: 700px;
+    background-color: brown;
+    height: 50px
+}
+.ball {
+    background-color: blue;
+    width: 20px;
+    height: 50px;
+}
