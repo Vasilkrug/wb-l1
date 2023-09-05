@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.column {
+    border: 1px solid black;
+    width: 200px;
+    padding: 10px;
+}
+
+.item {
+    width: 100%;
+}
