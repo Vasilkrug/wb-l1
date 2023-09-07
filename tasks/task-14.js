@@ -8,10 +8,9 @@ const getImg = async (url) => {
     try {
         const request = await fetch(url);
         if (request.ok) {
-            return await request.blob()
+            return await request.blob();
         }
     } catch (e) {
-        console.error(e)
+        console.error(e);
     }
-
-}
+};

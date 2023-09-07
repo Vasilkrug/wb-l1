@@ -5,13 +5,14 @@ const toLinkedList = (arr) => {
     //Реализация на классах
     //создаем класс Связного списка
     class LinkedList {
-        constructor(){
+        constructor() {
             //первоначально шапка пуста
             this.head = null;
         }
+
         //метод добавления новых узлов
-        add(value){
-//создаем новый узел
+        add(value) {
+            //создаем новый узел
             const node = new LinkedNode(value);
 
             // переменная для сохранения текущего узла
@@ -32,13 +33,15 @@ const toLinkedList = (arr) => {
             }
         }
     }
+
 //класс узла содержащий значение и ссылку на следующий узел
     class LinkedNode {
-        constructor (value){
+        constructor(value) {
             this.value = value;
             this.next = null;
         }
     }
+
 //создаем новый список и проходимся по входящим данным циклом добавляя их в список
     const list = new LinkedList()
     arr.forEach(element => {
@@ -48,13 +51,12 @@ const toLinkedList = (arr) => {
     return list;
 };
 
-
 const toLinkedList2 = (arr) => {
     //здесь все тоже самое, только сделал без использования классов
     const obj = {
-        head : null,
-        add(value){
-            const node = {value,next:null}
+        head: null,
+        add(value) {
+            const node = {value, next: null}
             let current;
 
             if (this.head == null)

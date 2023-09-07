@@ -49,7 +49,7 @@ const main = async () => {
         div.textContent = `${page}`;
         //устанавливаем по условию активную кнопку пагинации
         if (currentPage === page) {
-            div.classList.add('active-btn')
+            div.classList.add('active-btn');
         }
 
         div.addEventListener('click', () => {
@@ -101,8 +101,8 @@ const main = async () => {
             sortedRows = [...copy];
         }
         //сначала очищаем а затем и добавляем в таблицу отсортированные строки
-        table.tBodies[0].innerHTML = ''
-        table.tBodies[0].append(...sortedRows)
+        table.tBodies[0].innerHTML = '';
+        table.tBodies[0].append(...sortedRows);
     };
 
     //получаем шапку и формируем оттуда массив из th

@@ -72,4 +72,4 @@ const toJson = (data) => {
         const quotes = typeof data === 'string' ? `"` : '';
         return `${quotes}${data}${quotes}`;
     }
-}
+};

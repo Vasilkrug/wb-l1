@@ -3,7 +3,7 @@
 // например, плавное изменение его положения или размера.
 
 const start = document.querySelector('.start');
-const ball = document.querySelector('.ball');
+const loaderBlock = document.querySelector('.loader');
 //функция имитирующая блок загрузки
 const loader = () => {
     //начальный размер
@@ -12,13 +12,13 @@ const loader = () => {
     //интервал добавлен для плавности
     const timer = setInterval(() => {
         if (startWidth < 700) {
-            startWidth += 20
-            ball.style.width = `${startWidth}px`
+            startWidth += 20;
+            loaderBlock.style.width = `${startWidth}px`;
         } else {
-            clearInterval(timer)
+            clearInterval(timer);
         }
 
     }, 100)
-}
+};
 
 start.addEventListener('click', loader)

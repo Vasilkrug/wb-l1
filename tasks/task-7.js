@@ -5,7 +5,7 @@
 // После завершения работы первой функции вызвать вторую функцию.
 // После завершения работы второй функции вызвать третью функцию.
 // И так далее, пока все функции в массиве не будут вызваны по порядку.
-
-const collectionOfFunctions = async (arr) => {
-    arr.forEach((fn, index) => fn(index))
-}
+const array = [(i) => console.log(`First ${i}`), (i) => console.log(`Second ${i}`), (i) => console.log(`Third ${i}`)];
+const collectionOfFunctions = (arr) => {
+    arr.forEach((fn, index) => fn(index + 1));
+};

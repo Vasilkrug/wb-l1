@@ -54,7 +54,7 @@ const getAddress = () => {
         const response = await request.json();
         //получив данные отправляем их на рендер
         renderList(response.suggestions);
-    }
+    };
     //вызов функции вернет вторую функцию (обертку)
     // переменная isCoolDown имеет два состояния (false - готова выполниться, true - надо ждать)
     //пока переменная равна true все запросы будут игнорироваться
@@ -67,8 +67,7 @@ const getAddress = () => {
             isCoolDown = true;
             setTimeout(() => isCoolDown = false, ms);
         };
-
-    }
+    };
 //создание обертки
     const debouncedFetch = debounce(fetchData, 300);
 //каждые ввод символа делает запрос на сервер, поэтому благдаря дебаунсу мы можем оптимизировать эти запросы,
@@ -77,7 +76,7 @@ const getAddress = () => {
         const value = input.value;
         debouncedFetch(value);
     })
-}
+};
 //скрытие списка по клику вне области
 const hideList = () => {
     document.addEventListener('click', (e) => {
@@ -87,7 +86,7 @@ const hideList = () => {
             }
         }
     )
-}
+};
 
 getAddress()
 hideList()

@@ -20,4 +20,4 @@ export const getLocalStorageSize = (format = 'kb') => {
             return format === 'mb' ? size : size * 1024 * 1024;
         }
     }
-}
+};

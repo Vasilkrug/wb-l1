@@ -15,70 +15,70 @@ const passwordAnalyzer = (password) => {
     const lengthCheck = (password) => {
         if (password.length >= 8) {
             rating++;
-            errors.length = false
+            errors.length = false;
         } else {
-            errors.length = true
+            errors.length = true;
         }
-    }
+    };
 
     const upperLetterCheck = (password) => {
         if (/[A-Z]/.test(password)) {
             rating++
-            errors.upper = false
+            errors.upper = false;
         } else {
-            errors.upper = true
+            errors.upper = true;
         }
-    }
+    };
 
     const lowerLetterCheck = (password) => {
         if (/[a-z]/.test(password)) {
-            errors.lower = false
-            rating++
+            errors.lower = false;
+            rating++;
         } else {
-            errors.lower = true
+            errors.lower = true;
         }
-    }
+    };
 
     const digitsCheck = (password) => {
         if (/\d/.test(password)) {
             rating++
-            errors.digit = false
+            errors.digit = false;
         } else {
-            errors.digit = true
+            errors.digit = true;
         }
-    }
+    };
 
     const specialCheck = (password) => {
         if (/\W/.test(password)) {
-            rating++
-            errors.special = false
+            rating++;
+            errors.special = false;
         } else {
-            errors.special = true
+            errors.special = true;
         }
     }
     //проводим проверки
-    lengthCheck(password)
-    upperLetterCheck(password)
-    lowerLetterCheck(password)
-    digitsCheck(password)
-    specialCheck(password)
-        //устанавливаем сложность пароля в зависимости от рейтинга
+    lengthCheck(password);
+    upperLetterCheck(password);
+    lowerLetterCheck(password);
+    digitsCheck(password);
+    specialCheck(password);
+    //устанавливаем сложность пароля в зависимости от рейтинга
     if (rating === 5) {
-        result = 'Strong'
-        form.style.backgroundColor = 'green'
+        result = 'Strong';
+        form.style.backgroundColor = 'green';
     } else if (rating >= 3 && rating <= 4) {
-        result = 'Medium'
-        form.style.backgroundColor = 'orange'
+        result = 'Medium';
+        form.style.backgroundColor = 'orange';
     } else {
-        result = 'Week'
-        form.style.backgroundColor = 'red'
+        result = 'Week';
+        form.style.backgroundColor = 'red';
     }
 //устанавливаем стили для характеристик пароля, если с характеристикой все хорошо устанавливаем зеленый цвет,
 // иначе красным, чтобы пользователь понял что ему нужно изменить
     passwordCharacters.forEach(character => {
         const name = character.dataset.password;
         if (errors[name]) {
-            document.querySelector(`[data-password=${name}]`).style.color = 'red'
+            document.querySelector(`[data-password=${name}]`).style.color = 'red';
         } else {
             document.querySelector(`[data-password=${name}`).style.color = 'green';
         }
@@ -88,7 +88,7 @@ const passwordAnalyzer = (password) => {
 }
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const value = passwordInput.value;
-    passwordAnalyzer(value)
+    passwordAnalyzer(value);
 })

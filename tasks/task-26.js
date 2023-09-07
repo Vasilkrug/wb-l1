@@ -6,7 +6,7 @@
 const traversalTree = (tree) => {
     //если дерево пустое, возвращаем уведомление об этом
     if (!tree){
-        return 'Дерево пустое'
+        return 'Дерево пустое';
     }
     //берем всех потомков нашего дерева и проходим по ним в цикле
     const nodes = tree.children;
@@ -15,11 +15,11 @@ const traversalTree = (tree) => {
     [...nodes].forEach(node => {
         //если у узла если дочерние элементы, то вызываем функцию рекурсивно и записываема результат в массив
         if (node.children.length){
-            info = [...info,{'class': node.className,'tag':node.tagName},...traversalTree(node)]
+            info = [...info,{'class': node.className,'tag':node.tagName},...traversalTree(node)];
         }else {
             //если нет, просто записываем результат в массив
-            info = [...info,{'class': node.className,'tag':node.tagName}]
+            info = [...info,{'class': node.className,'tag':node.tagName}];
         }
     });
-    return info
-}
+    return info;
+};

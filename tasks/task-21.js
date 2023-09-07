@@ -14,7 +14,6 @@ const callstackSize = () => {
 try {
     callstackSize();
 } catch (e) {
-
     //первоначально стэк вызовов пустой
     const callStack = 0;
     //вызывая функцию с одной переменной получаем 13956 вызовов

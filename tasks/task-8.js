@@ -5,6 +5,4 @@ const closures = (arr) => {
     return () => {
         return arr.map(fn => fn())
     }
-
-}
-
+};

@@ -9,8 +9,8 @@ const getCurrentDate = (lang = 'en',format='day') => {
         'time':'LTS',
         'full':'LLLL'
     }
-    moment.locale(lang)
+    moment.locale(lang);
     return moment()
-        .format(formatMapping[format.toLowerCase()] || 'LL')
-}
+        .format(formatMapping[format.toLowerCase()] || 'LL');
+};
 console.log(getCurrentDate('ru','full'))

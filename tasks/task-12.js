@@ -3,24 +3,24 @@
 // Объект должен иметь свойства, такие как: название книги, автор и год издания.
 // Напишите методы для получения и изменения значений свойств книги.
 const book = {
-    'name':'Classic Swedish Interiors',
-    'author':'Lars Sjöberg',
-    'year':2010,
+    'name': 'Classic Swedish Interiors',
+    'author': 'Lars Sjöberg',
+    'year': 2010,
 //получаем значение по свойству, если такого нет возвращаем оповещение, если есть возвращаем значение
-    getValue(key = ''){
-        if (!this[key]){
-            return 'Такого свойства не существует'
-        }else {
-            return this[key]
+    getValue(key = '') {
+        if (!this[key]) {
+            return 'Такого свойства не существует';
+        } else {
+            return this[key];
         }
     },
     //если свойсва нет возвращаем оповещение, если есть меняем и возвращаем оповещение об успешном изменениии
-    setValue(key = '',value = ''){
-        if (!this[key]){
-            return 'Такого свойства не существует'
-        }else {
+    setValue(key = '', value = '') {
+        if (!this[key]) {
+            return 'Такого свойства не существует';
+        } else {
             this[key] = value
-            return 'Свойство успешно обновлено'
+            return 'Свойство успешно обновлено';
         }
     }
-}
+};
