@@ -2,9 +2,9 @@
 
 //функция принимает параметром формат ('mb') вернет значение в мегабайтах, остальнеы вернут в килобайтах
 
-const getLocalStorageSize = (format) => {
+export const getLocalStorageSize = (format = 'kb') => {
     //проверяем есть ли ключ в хранилище и если нет проводим расчет
-    if (localStorage.getItem('size')) {
+    if (!localStorage.getItem('size')) {
         let size = 0;
         //проверяю на 10 мегабайт
         let mb = 10;
